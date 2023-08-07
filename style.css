@@ -1,5 +1,11 @@
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .game {
     display: flex;
+    margin-top: 100px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -16,32 +22,48 @@
   }
   
   .hide {
-    display: none;
+    display: none !important;
   }
+
+  .winner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 32px;
+    width: 200px;
+    height: 150px;
+    background-color: beige;
+    animation: pulse 1s linear infinite;
+    border-radius: 5px;
+    border: 1px solid rgb(68, 68, 68);
+  }
+
   
   ul {
     display: grid;
     width: fit-conten;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 0;
-    grid-template-columns: repeat(3, 80px); 
+    grid-template-columns: repeat(3, 100px); 
     list-style-type: none;
   }
   
-  .layot > .cell:hover {
+  .cell__hover:hover {
+    background-color: rgb(241, 241, 241) !important;
     cursor: pointer;
   }
   
-  .layot > .cell{
-    height: 80px;
-    width: 80px;
-    border: 1px solid black;
+  .layot > .cell {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
     
-    font-size: 40px;
-    font-family: 'Roboto';
+    font-size: 50px;
   }
   
   
@@ -56,8 +78,19 @@
     border-radius: 5px;
   }
   
+  .restart:hover {
+    cursor: pointer;
+  }
+  
   .turnIndicator {
     margin: 0;
     font-weight: 100;
+  }
+
+
+  @keyframes pulse {
+    50% {
+      transform: scale(1.2);
+    }
   }
   
