@@ -1,0 +1,63 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 { 
+    margin: 0 !important;
+    font-size: 40px;
+    width: fit-content;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  ul {
+    display: grid;
+    width: fit-conten;
+    border: 1px solid black;
+    padding: 0;
+    grid-template-columns: repeat(3, 80px); 
+    list-style-type: none;
+  }
+  
+  .layot > .cell:hover {
+    cursor: pointer;
+  }
+  
+  .layot > .cell{
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 40px;
+    font-family: 'Roboto';
+  }
+  
+  
+  .vinner {
+    top: 120px;
+    font-size: 40px;
+    margin: 0;
+  }
+  
+  .restart {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .turnIndicator {
+    margin: 0;
+    font-weight: 100;
+  }
+  
